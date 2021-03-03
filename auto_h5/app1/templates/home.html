@@ -2,8 +2,11 @@
  
 {% block content %}
     <p>Enter your Animal:</p>
-    <input  type="text"             list="animallist" Placeholder="Search Animal.." 
-            class="form-control"    style="width:300px;">
+    <input  type="text"             
+            list="animallist" 
+            Placeholder="Search Animal.." 
+            class="form-control"    
+            style="width:300px;">
 
     <datalist id="animallist">
  {% for animal in animals %}
