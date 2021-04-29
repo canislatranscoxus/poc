@@ -1,16 +1,3 @@
-'''
-This is a small test using redis in python.
-
-
-on gcp
-
-sudo apt-get install telnet
-
-telnet <your-redis-server> 6379
-
-
-'''
-
 import redis
 import os
 import sys
@@ -26,22 +13,22 @@ REDIS_AUTH = os.environ[ 'REDIS_AUTH' ]
 r = redis.Redis( host     = REDIS_HOST
                 ,port     = REDIS_PORT
                 ,db       = REDIS_DB
-                ,password = REDIS_AUTH
+                #,password = REDIS_AUTH
                 ,decode_responses= True
                 )
 
 # Insert key values in redis
-r.set( name = 'fly', value= 'eagle' )
+a1 = r.set( name = 'fly', value= 'eagle' )
 r.set( name = 'bite', value= 'dog' )
 r.set( name = 'claw', value= 'lion' )
 
-# get all the key values from redis
-keys = r.keys( '*' )
-for key in keys:
-    try:
-        v = r.get( key )
-        print( '{} : {}'.format( key, v )  )
-    except Exception as e:
-        print( 'error getting value of key: {}'.format( key ) )
+value = r.get( name = 'fly' )
+print( type( value ) )
 
-print( '\n\n end.' )
+if type( value ) == bytes:
+    print( value.decode( 'utf-8' ) )    
+else:
+    print( value )
+
+print( a1 )
+

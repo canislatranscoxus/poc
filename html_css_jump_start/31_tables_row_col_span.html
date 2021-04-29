@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>table row col span</title>        
+        <style>
+            body{
+                font-family: Verdana;
+            }
+
+            table{
+                width: 25%;
+                background-color:lightskyblue;
+            }
+
+            td{
+                border: 1px solid white;
+            }
+            caption {
+                font-weight: bold;
+                margin-bottom: 5px;
+                color:white;
+                background-color: rgb(161, 0, 161);
+                padding: 0.33em 0em;
+            }
+
+            thead, tfoot {
+                background-color:  rgb(37, 127, 245);
+            }
+
+            th{
+                text-align: left;
+                color: maroon;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>table row col span</h1>
+
+        <table>
+            <caption>My favorite songs</caption>
+
+            <thead>
+                <tr  >
+                    <th rowspan="2">item</th>
+                    <th>video</th>
+                    <th>artist</th>
+                    <th>likes</th>
+                </tr>
+                <tr>
+                    <th>🎷</th>
+                    <th>💃</th>
+                    <th>👍</th>
+                </tr>
+
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th colspan="4" >Ana</th>
+                </tr>
+                <tr>
+                    <th>electric violin</th>
+                    <td>Tocata e fuga</td>
+                    <td>Vanessa Mae</td>
+                    <td>500</td>
+                </tr>
+    
+                <tr>
+                    <th>modern violin</th>
+                    <td>Storm</td>
+                    <td>Vanessa Mae</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <th colspan="4" >Saweeti</th>
+                </tr>
+                <tr>
+                    <th>rap</th>
+                    <td>Say so</td>
+                    <td>Doja Cat</td>
+                    <td>600</td>
+                </tr>
+    
+                <tr>
+                    <th>hip hop</th>
+                    <td>Back to the streets</td>
+                    <td>Cardi B</td>
+                    <td>600</td>
+                </tr>
+    
+            </tbody>
+            
+
+
+
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1000</td>
+                </tr>
+            </tfoot>
+
+
+
+        </table>
+
+    </body>
+</html>

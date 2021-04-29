@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>image size</title>        
+        <style>
+            body{
+                font-family: Verdana;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>map in image</h1>
+
+        <h2>fixed size. 50%</h2>
+        <img src="images/largest-wild-cats.jpg" alt="cats" usemap="#map2" width="560" >
+
+        <h2>true size</h2>
+        <img src="images/largest-wild-cats.jpg" alt="cats" usemap="#map1" >
+        
+        <map name="map1" >
+            <area shape="rect"   coords="200,170,470,600" alt="Top left"  href="https://a-z-animals.com/animals/lion/" >
+            <area shape="circle" coords="632,434,210"  href="https://a-z-animals.com/animals/leopard/"  >
+            <area shape="poly"   
+                  alt="Bottom right"
+                  coords="810,122,774,230,762,569,836,665,990,665,1050,605,1050,230,975,122"  
+                  href="https://a-z-animals.com/animals/tiger/" >
+        </map>
+
+
+        <map name="map2" >
+            <area shape="rect"   coords="100,85,235,300"  href="https://a-z-animals.com/animals/lion/" >
+            <area shape="circle" coords="316,217,100"  href="https://a-z-animals.com/animals/leopard/"  >
+            <area shape="poly"   
+                  coords="405,61,387,115,381,284,418,332,495,332,525,115,487,61"
+                  href="https://a-z-animals.com/animals/tiger/" >
+        </map>
+
+
+
+    </body>
+</html>
