@@ -1,0 +1,69 @@
+<html>
+
+    <head></head>
+
+    <body>
+
+        <div>
+            <form action="" method="POST">
+
+                <label>Pet name (2 to 15 characters): </label>
+                <input type="text" name="pet_name" id="pet_name" 
+                minlength="2" maxlength="15" 
+                size="100"
+                >
+
+                <br>
+                <label>Bio:</label>
+                <textarea rows="3" cols="5" ></textarea>
+
+                <br>
+                <p>Languages</p>
+
+                <label class="layersMenu">
+                    <input type="radio" name="lang" id="en" value="en">
+                    <img src="./images/usa.png" width="64" >English USA, UK
+                </label>
+                <br>            
+                <label class="layersMenu">
+                    <input type="radio" name="lang" id="es" value="es">
+                    <img src="./images/mex.png" width="64" >Español Mexico, Latinamerica, España
+                </label>
+                <br><br><hr>
+
+
+                <input type="radio" name="gender" id="gender_man" value=1 >
+                <label for="gender_man" >man</label>
+
+                <input type="radio" name="gender" id="gender_woman" value=1 >
+                <label for="gender_woman" >woman</label>
+                <br>
+
+
+                <input type="submit" value="Submit language" >
+                <input type="reset"  value="reset form"
+
+            </form>
+        </div>
+
+        <br><br><br>
+
+        <form action="" method="POST">
+            <p>Pets</p>
+        <label class="layersMenu">
+            <input type="radio" name="pets" id="radio_dog"  value="1" checked />
+            <img src="./images/dog.jpeg" width="64" >Dogs
+        </label>
+
+        <br>
+        <label class="layersMenu">
+            <input type="radio" name="pets" id="radio_cat"  value="2" />
+            <img src="./images/black_cat.jpeg" width="64">cats
+        </label>
+        <br>
+        <input type="submit" value="Submit pet" >
+
+
+    </body>
+
+</html>
