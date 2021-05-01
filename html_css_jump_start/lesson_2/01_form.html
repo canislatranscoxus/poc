@@ -5,13 +5,12 @@
     <body>
 
         <div>
+            <h2>Passport form</h2>
             <form action="" method="POST">
 
                 <label>Pet name (2 to 15 characters): </label>
                 <input type="text" name="pet_name" id="pet_name" 
-                minlength="2" maxlength="15" 
-                size="100"
-                >
+                minlength="2" maxlength="15" size="100">
 
                 <br>
                 <label>Bio:</label>
@@ -29,25 +28,22 @@
                     <input type="radio" name="lang" id="es" value="es">
                     <img src="./images/mex.png" width="64" >Español Mexico, Latinamerica, España
                 </label>
-                <br><br><hr>
+                <br><br>
 
+                <input type="radio" name="gender" id="gender_male" value=1 >
+                <label for="gender_male" >male</label>
 
-                <input type="radio" name="gender" id="gender_man" value=1 >
-                <label for="gender_man" >man</label>
-
-                <input type="radio" name="gender" id="gender_woman" value=1 >
-                <label for="gender_woman" >woman</label>
+                <input type="radio" name="gender" id="gender_female" value=1 >
+                <label for="gender_female" >female</label>
                 <br>
-
 
                 <input type="submit" value="Submit language" >
                 <input type="reset"  value="reset form"
-
             </form>
         </div>
+        <hr>
 
-        <br><br><br>
-
+        <h2>Animal Form</h2>
         <form action="" method="POST">
             <p>Pets</p>
         <label class="layersMenu">
