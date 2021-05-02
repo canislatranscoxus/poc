@@ -27,8 +27,28 @@ in css the # is used for html tag elements that has an id
 
 -------------------------------------------------------------------------------
 
+New style
 
+html, use attribute id="my_cool_style"
+css, we can use # or dot .
+see file:  /home/art/git/poc/html_css_jump_start/lesson_1/05_styling_content.html
+
+example:
+
+<style>
+my_cool_style{
+    color: red;
+    font-weight: bold;
+}
+</style>
+.
+.
+.
+<span id="my_cool_style"> . . . </span>
 -------------------------------------------------------------------------------
+
+
+
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
