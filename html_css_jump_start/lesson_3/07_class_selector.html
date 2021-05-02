@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class selector</title>
+        <style>
+            body{
+                font-family: Tahoma;
+            }
+
+            label {
+                width:150px;
+                display: inline-block;
+                margin-bottom: 5px;
+                background-color: cornflowerblue;
+            }
+            .optional {
+                border: 1px solid lightblue;
+            }
+            .required{
+                border:1px solid pink;
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <h1>class selector</h1>
+
+        <h2>Pet data</h2>
+
+        <form action="" method="POST" >
+
+            <label>Name</label>         <input class="required" name="pet_name"    id="pet_name"     type ="text" ><br>
+            <label>Address</label>      <input class="required" name="pet_address" id="pet_address"  type ="text" ><br>
+            <label>Telephone</label>    <input class="optional" name="pet_tel"     id="pet_tel"      type ="text" ><br>
+            <input type="submit" value="Send" >
+        </form>
+        
+    </body>
+
+</html>
