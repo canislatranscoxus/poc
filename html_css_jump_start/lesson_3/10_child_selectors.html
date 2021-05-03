@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>child selector</title>
+        
+        <style>
+            body{
+                font-family: Tahoma;
+            }
+            /*this rule applies to any li*/
+            ul li{
+                color: red;
+            }
+
+            /*this rule applies to Direct descendants of ul */
+            ul > li{
+                color:indigo;
+            }
+
+
+        </style>
+    </head>
+
+
+    <body>
+        <h1>Child selector</h1>
+
+        <ul>
+            <li>Chess</li>
+            <li>Archery</li>
+            <li>Fencing</li>
+
+            <li>Combat Disciplines:
+                <ol>
+                    <li>Tae Kwon Do</li>
+                    <li>Wrestling</li>
+                    <li>Judo</li>
+                    <li>Jiu Jitsu</li>
+                    <li>Box</li>
+                    <li>Muay Thai</li>
+                </ol>
+            </li>
+            <li>water
+                <ol>
+                    <li>Swimming</li>
+                    <li>Diving</li>
+                    <li>Surfing</li>
+                    <li>Wind Surfing</li>
+                </ol>
+            </li>
+            <li>skating
+                <ol>
+                    <li>Skateboard</li>
+                    <li>roller skate</li>
+                    <li>ice skate</li>
+                </ol>
+            </li>
+        </ul>
+
+    </body>
+</html>

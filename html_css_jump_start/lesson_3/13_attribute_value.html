@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute value selector</title>
+        <style>
+            body{
+                font-family: tahoma;
+            }
+            img{
+                width: 150;
+                border: solid 10px black;
+            }
+
+            /* test equality */
+            img[src="images/dragons/chinese.jpeg"] {
+                border: solid 10px orangered;
+            }
+            /* test starts with */
+            img[src^="images/dragons"] {
+                border: solid 10px blue;
+            }
+            /* test ends with */
+            img[src$="mera.jpeg"] {
+                border: solid 10px fuchsia;
+            }
+            /* test contains */
+            img[src*="hydra"] {
+                border: solid 10px green;
+            }
+
+
+
+
+        </style>
+    </header>
+
+    <body>
+        <h1>attribute value selector</h1>
+
+        <img src="images/dragons/chinese.jpeg" >
+        <img src="images/dragons/fire.jpeg" >
+        <img src="images/dragons/water.jpeg" >
+
+        <img src="images/monsters/hydra.jpeg" >
+
+        <img src="images/monsters/cerberus.jpeg" >
+        <img src="images/monsters/chimera.jpeg" >
+        <img src="images/monsters/kraken.jpeg" >
+        <img src="images/monsters/phoenix.jpeg" >
+
+        
+    </body>
+</html>

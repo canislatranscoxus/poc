@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute selector</title>
+        <style>
+
+            /* Applies to bookmarks*/
+            a [name] {
+                color: blue;
+            }
+
+            /* Applies to hyperlinks */
+            a [href] {
+                color:orangered;
+            }
+
+        </style>
+    </header>
+
+    <body>
+        <h1>attribute selector</h1>
+
+        <a name="bookmark1" >here is my bookmark 1</a><br>
+        <a href="https://www.bbc.com/" >BBC link</a><br>
+
+        <a name="bookmark2" >here is my bookmark 2</a><br>
+        <a href="https://www.oreilly.com/"> O'reilly books</a>
+
+    </body>
+</html>
