@@ -73,9 +73,21 @@ aSelector:last-child
 aSelector:nth-child(n)
 aSelector:nth-last-child(n)
 aSelector:only-child
-
-
-
 -------------------------------------------------------------------------------
+L4.
+4.2 Styling Text
+
+aSelector{
+    text-decorator: aLine aStyle aColor aThickness;
+
+    or
+
+    text-decorator-line: aLine;
+    text-decorator-style: aStyle;
+    text-decorator-color: aColor;
+    text-decorator-thickness: aThickness;
+
+}
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Background Image Position</title>
+        <style>
+            body{
+                font-family: Tahoma;
+                background-image: url("images/hammer_sharks.jpeg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position:right bottom;
+
+            }
+            div{
+                margin-bottom: 10em;
+            }
+            #mainDiv{
+                height: 300px;
+                overflow: scroll;
+            }
+
+            #div1 {
+                background-color: #fc7276;
+            }
+            #div2{
+                background-color: rgb(252,186,3);
+            }
+            #div3{
+                background-color: lightgreen;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="mainDiv">
+            <div id="div1" >This is div1 </div>
+            <div id="div2" >This is div2 </div>
+            <div id="div3" >This is div3 </div>
+        </div>
+
+        <div >
+            <div >This is div1 </div>
+            <div >This is div2 </div>
+            <div >This is div3 </div>
+        </div>
+
+    </body>
+</html>
