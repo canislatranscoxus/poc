@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute value selector</title>
+        <style>
+            body{
+                font-family: tahoma;
+            }
+
+            label{
+                width: 150px;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            input:focus, select:focus {
+                border: #25a7f7 solid 2px;
+                background-color: #25a7ff;
+                color: white;
+            }
+
+        </style>
+    </header>
+
+    <body>
+        <form >
+            <label>Name</label>     <input type="text" class="required" autofocus><br>
+            <label>Address</label>  <input type="text" class="required" ><br>
+            <label>Tel</label>      <input type="text" class="optional" ><br>
+
+            <label>Nationality</label>
+            <select class="required">
+                <option>UK</option>
+                <option>Norway</option>
+                <option>France</option>
+                <option>USA</option>
+            </select>
+
+
+
+        </form>
+        
+    </body>
+</html>

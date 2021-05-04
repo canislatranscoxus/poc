@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute value selector</title>
+        <style>
+            body{
+                font-family: tahoma;
+            }
+
+            label{
+                width: 150px;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+
+            p:first-of-type{
+                color:red;
+            }
+            p:last-of-type{
+                color:purple;
+            }
+            p:nth-of-type(2){
+                color:orange;
+            }
+            p:nth-last-of-type(2){
+                color:blue;
+            }
+            p:only-of-type(2){
+                background-color: pink;
+                color:green;
+            }
+
+
+            /* below style would not work as desired */
+            /*
+            p:first-child {
+                color:red;
+            }
+            p:last-child {
+                color:purple;
+            }
+            p:nth-child(2){
+                color: orange;
+            }
+            p:nth-last-child(2){
+                color: blue;
+            }
+            p:only-child {
+                background-color: pink;
+                color: green;
+            }            
+            */
+
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h1>Heading A</h1>
+            <p>parragraph 1</p>
+            <p>parragraph 2</p>
+            <p>parragraph 3</p>
+            <p>parragraph 4</p>
+            <p>parragraph 5</p>
+        </div>
+
+        <div>
+            <h1>Heading B</h1>
+            <p>only parragraph</p>
+        </div>        
+    </body>
+</html>

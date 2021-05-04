@@ -47,11 +47,35 @@ my_cool_style{
 <span id="my_cool_style"> . . . </span>
 -------------------------------------------------------------------------------
 
+Lesson 3.
 
+Groupping selectors
 
+you can combine class id etc
+
+someTagName#someId.someClassName { declarations }
+-------------------------------------------------------------------------------
+
+.my_class{
+    declarations . . .
+}
+#my_ID{
+    declarations . . .
+}
+<Element class="my_class" >
+<Element id="my_ID" >
 
 -------------------------------------------------------------------------------
--------------------------------------------------------------------------------
+Pseudo elements
+
+aSelector:first-child
+aSelector:last-child
+aSelector:nth-child(n)
+aSelector:nth-last-child(n)
+aSelector:only-child
+
+
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------

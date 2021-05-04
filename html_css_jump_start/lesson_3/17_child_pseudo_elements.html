@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute value selector</title>
+        <style>
+            body{
+                font-family: tahoma;
+            }
+
+            label{
+                width: 150px;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+
+            li:first-child {
+                color:red;
+            }
+            li:last-child {
+                color:purple;
+            }
+            li:nth-child(2){
+                color: orange;
+            }
+            li:nth-last-child(2){
+                color: blue;
+            }
+            li:only-child {
+                background-color: pink;
+                color: green;
+            }            
+
+
+        </style>
+    </header>
+
+    <body>
+        <p>Spanish Islands</p>
+        <ul>
+            <li>Majorca</li>
+            <li>Menorca</li>
+            <li>Ibiza</li>
+            <li>Tenerife</li>
+            <li>Gran Canaria</li>
+            <li>Lanzarote</li>                        
+        </ul>        
+
+        <p>Nordic countries</p>
+        <ul>
+            <li>Norway</li>
+            <li>Sweden</li>
+            <li>Denmark</li>
+            <li>Finland</li>
+        </ul>        
+
+        <p>Welsh-speaking countries</p>
+        <ul>
+            <li>Wales :-)</li>
+        </ul>        
+    </body>
+</html>

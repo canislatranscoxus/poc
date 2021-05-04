@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>attribute value selector</title>
+        <style>
+            body{
+                font-family: verdana;
+            }
+
+            /* you can reset a counter using counter-reset: counterName, optionalValue */
+            h1 {
+                counter-reset: p-number;
+            }
+            p {
+                counter-increment: p-number;
+            }
+
+            /* You can display a counter using counter (aCounter, aListStyle) */
+            /* For details of list styles, see https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
+            p::before  {
+                content: "Paragraph " counter(p-number, upper-roman) ". ";
+                display: block;
+                color: orange;
+                font-weight: bold;
+            }
+
+            p::after{
+                width: 16px;
+                content: url(images/skull.png);
+                
+            }
+
+
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h1>Hornet</h1>
+            <p> 
+                Murder hornets: The Asian giant hornet has attracted significant attention online 
+                thanks to its nickname of the “murder hornet.” 
+                Why the dramatic nickname? For one, the species can grow quite large, 
+                with queens reaching more than 2 inches in length.
+            </p>
+            
+            <p>
+                Voracious Predators: In addition to their large size, 
+                giant hornets received their “murder hornet” nickname from their voracious predatory habits. 
+                A single Asian giant hornet can kill more than 40 bees per minute 
+                by rapidly using its large mandibles to decapitate beer after bee!
+            </p>
+
+            <h1>Scorpion</h1>
+            <p>
+                Scorpions are members of the class Arachnida and are closely related to spiders, mites, and ticks. 
+                They are commonly thought of as desert dwellers, 
+                but they also live in Brazilian forests, British Columbia, North Carolina, and even the Himalayas. 
+                These hardy, adaptable arthropods have been around for hundreds of millions of years, 
+                and they are nothing if not survivors.</p>
+
+            <p>
+                Such survival skills allow scorpions to live in some of the planet's toughest environments. 
+                Researchers have even frozen scorpions overnight, 
+                only to put them in the sun the next day and watch them thaw out and walk away. 
+                But there is one thing scorpions have a difficult time living without—soil. 
+                They are burrowing animals, so in areas of permafrost or heavy grasses, where loose soil is not available, 
+                scorpions may not be able to survive.
+            </p>
+
+        </div>
+        
+    </body>
+</html>
