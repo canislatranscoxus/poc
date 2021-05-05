@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inner display flex</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #wrapper{
+                display:flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            #wrapper > * {
+                flex-grow:1;
+                flex-shrink:1;
+                flex-basis:200px; /* (width), content*/
+
+                opacity:50%;
+                background-color: rgb(0, 102, 255);
+                margin: 3px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Inner display flex</h4>
+
+        <div id="wrapper">
+            <div id="div1" >div1</div>
+            <div id="div2" >div2</div>
+            <div id="div3" >div3 has some interesting content, I wonder what it looks like.</div>
+            <div id="div4" >div4</div>
+            <div id="div5" >div5</div>
+            <div id="div6" >div6</div>                        
+        </div>
+            
+    </body>
+</html>

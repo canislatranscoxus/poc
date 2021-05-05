@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inner display table</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #wrapper{
+                display: table;
+            }
+            .tcap{
+                display: table-caption;
+                background-color: slategrey;
+                color: white;
+            }
+            .tr{
+                display: table-row;
+            }
+            .tc {
+                display:table-cell;
+                width:100px;
+            }
+            
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Inner display table</h4>
+
+        <div id="wrapper" >
+            <div class="tcap">Places</div>
+            <div class="tr"  >
+                <div class="tc">Oslo</div>
+                <div class="tc">Bergen</div>
+                <div class="tc">Troms&oslash</div>
+            </div>
+
+            <div class="tr">
+                <div class="tc" >St. Anton</div>
+                <div class="tc" >Kitzb&uuml;hel</div>
+                <div class="tc" >Val d'Is&egrave;re</div>
+            </div>
+        </div>
+
+       
+    </body>
+</html>

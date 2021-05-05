@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Outer display type</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #div2 div{
+                display: inline;
+            }
+            #navbar2 a{
+                display: block;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Outer display type</h4>
+
+        <h2>Div 1 - default block</h2>            
+        <div id="div1" >
+            <div>Hello</div>
+            <div>Thank you</div>
+            <div>Good night</div>
+        </div>
+
+        <br>
+        <h2>Div 2 - inline</h2>
+        <div id="div2" >
+            <div>Hello</div>
+            <div>Thank you</div>
+            <div>Good night</div>
+        </div>
+       
+        <h2>Navbar 1 - default inline</h2>
+        <navbar id="navbar1">
+            <a href="https://www.oreilly.com/" >O'Really</a>
+            <a href="https://www.bbc.com/news" >BBC</a>
+            <a href="https://www.google.com/"  >Google</a>
+        </navbar>
+
+
+        <h2>Navbar 2 - block</h2>
+        <navbar id="navbar2">
+            <a href="https://www.oreilly.com/" >O'Really</a>
+            <a href="https://www.bbc.com/news" >BBC</a>
+            <a href="https://www.google.com/"  >Google</a>
+        </navbar>
+
+        
+    </body>
+</html>

@@ -128,12 +128,20 @@ aSelector {
 3 value => top, left/right, and bottom
 4 value => top, right, bottom, left
 
-
-
-
-
-
 -------------------------------------------------------------------------------
+4.6 Controlling how Elements are Displayed
+
+html:
+    * block elements
+    * inline elements
+
+Block elements. <h1> <div> <p> <li>
+    * take up the full width available
+    * have a line-break before and after
+
+Inline elements. <span> <a>
+    * take up only as much width as needed. 
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
