@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Border</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            th{
+                background-color: lightblue;
+            }
+            table, th, td {
+                border: 2px solid blue;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            .table_separate{
+                border-collapse:separate;
+            }
+            .table_separate th{
+                background-color: yellow;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h4>table 1</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Capital</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UK</td>
+                    <td>London</td>
+                    <td>66m</td>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington DC</td>
+                    <td>328m</td>
+                </tr>
+                <tr>
+                    <td>Norway</td>
+                    <td>Oslo</td>
+                    <td>5m</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>table separate</h4>
+        <table class="table_separate" >
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Capital</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UK</td>
+                    <td>London</td>
+                    <td>66m</td>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington DC</td>
+                    <td>328m</td>
+                </tr>
+                <tr>
+                    <td>Norway</td>
+                    <td>Oslo</td>
+                    <td>5m</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+    </body>
+</html>

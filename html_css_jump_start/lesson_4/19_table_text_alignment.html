@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Text Alignment</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            table{
+                width: 50%;
+            }
+
+            th{
+                background-color: darkgreen;
+                height:  3em;
+                text-align: left;
+                vertical-align: bottom;
+                color:white;
+            }
+            table, th, td {
+                border: 2px solid purple;
+            }
+            th.numeric, td.numeric{
+                text-align: right;
+                width: 20%;
+            }
+
+            table{
+                border-collapse: collapse;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h4>table 1</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Capital</th>
+                    <th class="numeric" >Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UK</td>
+                    <td>London</td>
+                    <td class="numeric" >67.61m</td>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington DC</td>
+                    <td class="numeric">331.42m</td>
+                </tr>
+                <tr>
+                    <td>Norway</td>
+                    <td>Oslo</td>
+                    <td class="numeric">5.39m</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

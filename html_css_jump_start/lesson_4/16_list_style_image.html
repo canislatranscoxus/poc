@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Style</title>
+        <style>
+            body{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 2em;
+            }
+
+            #list1 {
+                list-style-image: url("images/skull.png");
+                padding-left: 100px;
+            }
+            #list2{
+                list-style-type: none;
+                padding-left: 0px;
+            }
+
+            #list2 li{
+                background-image: url("images/skull.png");
+                background-repeat: no-repeat;
+                line-height: 60px;
+                padding-left: 100px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h4>This is list 1</h4>
+        <ol id="list1">
+            <li>Cardi B</li>
+            <li>Doja Cat</li>
+            <li>Megan the Stallion</li>
+            <li>Saweeti</li>
+        </ol>
+
+        <h4>This is list 2</h4>
+        <ol id="list2">
+            <li>Cardi B</li>
+            <li>Doja Cat</li>
+            <li>Megan the Stallion</li>
+            <li>Saweeti</li>
+        </ol>
+
+    </body>
+</html>
