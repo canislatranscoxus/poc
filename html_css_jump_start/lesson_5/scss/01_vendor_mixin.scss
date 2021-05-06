@@ -1,0 +1,51 @@
+$fonts: arial, consolas, sans-serif;
+$panel-color:rgb(4, 255, 4);
+
+@mixin my-trans($property) {
+    transform:          $property;
+    -webkit-transform:  $property;
+    -moz-transform:     $property;
+    -ms-transform:      $property;
+    -o-transform:       $property;
+}
+
+body{
+    font-family:$fonts;
+}
+#wrapper{
+    display:grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 5px;
+    grid-auto-rows:minmax(100px, auto);
+}
+#wrapper div {
+    opacity: 50%;
+    background-color:$panel-color;
+}
+#div1{
+    grid-row:1;
+    grid-column: 1/3;
+}
+#div2{
+    grid-row:2/4;
+    grid-column: 1;
+}
+#div3{
+    grid-row:1/3;
+    grid-column: 2/4;
+}
+#div4{
+    grid-row:3;
+    grid-column: 3;
+}
+
+
+#div5 {
+    margin-top: 30px;
+    background-color: white;
+    color:red;
+    border: solid 2px purple;
+    width: 40%;
+
+    @include my-trans( rotate(40deg) ); 
+}

@@ -143,6 +143,36 @@ Inline elements. <span> <a>
     * take up only as much width as needed. 
 
 -------------------------------------------------------------------------------
+L 5.1 Saas/SCSS
+
+install nodejs and Saas
+
+open a terminal, go to your dir
+
+to convert from scss to css use the command
+
+    $   sass --watch <scss_source_folder>:<css_target_folder>
+
+cd lesson_5
+sass --watch scss:css
+
+
+-------------------------------------------------------------------------------
+
+L 5.2 Styling Borders, Shadows, and Overflow
+
+round corners
+
+border-radius: ul ur lr ll;
+
+or
+
+border-top-left-radius:
+border-top-right-radius:
+border-bottom-left-radius:
+border-bottom-right-radius:
+
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
