@@ -5,9 +5,8 @@ Description: Example of loading a config file
 references: https://docs.python.org/3/library/configparser.html
 '''
 import configparser
+
 config = configparser.ConfigParser()
-
-
 file_path = '/home/art/git/poc/load_config/config.ini'
 config.read( file_path )
 
