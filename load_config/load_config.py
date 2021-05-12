@@ -19,8 +19,25 @@ print(  'bitbucket.org' in config )
 print( 'bytebong.com' in config )
 #False
 
+#print( config[ 'non_exist_section' ][ 'non_exist_param' ] )
+
+
 print( config['bitbucket.org']['User'] )
 #'hg'
 
 print( config['DEFAULT']['Compression'] )
 # yes
+
+'''def my_convert ( v, t):
+    print( v )
+    print( type( v ) )
+    x = t( v )
+    print( x )
+    print( type( x ) )
+
+a= 'True'
+x = my_convert( a, bool )
+
+
+
+'''

@@ -23,3 +23,6 @@ parser.add_argument( '-d', '--dangerous', type = bool, default = False, help = '
 args = parser.parse_args()
 
 print( args )
+print( 'petname  : {}'.format( args.petname ) )
+print( 'years    : {}'.format( args.years ) )
+print( 'dangerous: {}'.format( args.dangerous ) )

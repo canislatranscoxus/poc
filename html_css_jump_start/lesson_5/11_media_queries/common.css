@@ -1,0 +1,49 @@
+img {
+    width: 200px;
+    height: 150px;
+}
+
+#MyMainContainer {
+    background-color: orange;
+}
+
+@media screen and (max-width: 950px) {
+    img, aside {
+        display: none;
+    }
+}
+
+@media screen {
+    nav{
+        width: 15%;
+        float: left;
+    }
+
+    section{
+        width: 85%;
+        float: left;
+    }
+
+    nav a:link, a:visited{
+        color: steelblue;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 2px;
+    }
+
+    nav a:hover {
+        color: white;
+        background-color: steelblue;
+    }
+}
+
+@media not screen {
+    nav{
+        display: none;
+    }
+    selection {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+/*
+*   if you import other stylesheets, you can use media queries here. For example:
+*      @import url( common.css ) screen and (color);
+*/
+@import url(common.css);
+
+/* Define a body suitable for the screen */
+body {
+    background-color: #5dc8fa;
+    font-family: Century Gothic, Tahoma, Arial, Verdana,  Helvetica, sans-serif;
+    margin:0px auto;
+    max-width: 1000px;
+    border: solid 1px #5dc8fa;
+}

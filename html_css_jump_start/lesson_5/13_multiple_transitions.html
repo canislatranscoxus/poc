@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Multiple Transition</title>
+        <style>
+            #myPanel{
+                background-color: yellow;
+                width: 200px;
+                height: 100px;
+
+                transition: background-color 9250ms, width 0.25s, height 2s;
+            }
+
+            #myPanel:hover{
+                background-color: red;
+                width: 300px;
+                height: 150px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Multiple Transition</h1>
+        <div id="myPanel" ></div>
+    </body>
+
+</html>
