@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>rotations</title>
+        <style>
+            div {
+                font-family: Verdana, arial;
+                font-size: small;
+                width: 300px;
+                height: 60px;
+                background-color: yellow;
+                border-radius: 5px;
+            }
+
+            .rotate1{
+                transform:         rotate(10deg);
+                -ms-transform:     rotate(10deg);
+                -webkit-transform: rotate(10deg);
+                -moz-transform:    rotate(10deg);
+                -o-transform:      rotate(10deg);
+            }
+            .rotate2{
+                transform:         rotate(-10deg);
+                -ms-transform:     rotate(-10deg);
+                -webkit-transform: rotate(-10deg);
+                -moz-transform:    rotate(-10deg);
+                -o-transform:      rotate(-10deg);
+            }
+            .rotate3{
+                transform:         rotate(-0.5deg);
+                -ms-transform:     rotate(-0.5deg);
+                -webkit-transform: rotate(-0.5deg);
+                -moz-transform:    rotate(-0.5deg);
+                -o-transform:      rotate(-0.5deg);
+            }
+
+            .translateAndRotateAboutTopLeft{
+                transform:         translate(100px, 100px) rotate(10deg);
+                -ms-transform:     translate(100px, 100px) rotate(10deg);
+                -webkit-transform: translate(100px, 100px) rotate(10deg);
+                -moz-transform:    translate(100px, 100px) rotate(10deg);
+                -o-transform:      translate(100px, 100px) rotate(10deg);
+
+                transform-origin:         left top;
+                -ms-transform-origin:     left top;
+                -webkit-transform-origin: left top;
+                -moz-transform-origin:    left top;
+                -o-transform-origin:      left top;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>rotations</h1>
+
+        <div class="rotate1" >
+            Rotate 10 degrees clockwise (about center-point ).<br>
+            transform: rotate(10deg);
+        </div>
+        <br><br>
+        <div class="rotate2" >
+            Rotate 10 degrees anticlockwise (about center-point ).<br>
+            transform: rotate(-10deg);
+        </div>
+        <br><br>
+        <div class="rotate3" >
+            Rotate 5 radians anticlockwise (about center-point ).<br>
+            transform: rotate(-0.5rad);
+        </div>
+        <br><br>
+
+        <div class="translateAndRotateAboutTopLeft" >
+            translate and then rotate (about top-left corner).<br>
+            transform: translate(100px,100px) rotate(10deg);
+            transform-origin: left top;
+        </div>
+        <br><br>
+
+    </body>
+
+</html>
