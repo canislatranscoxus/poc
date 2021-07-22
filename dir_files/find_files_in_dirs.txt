@@ -1,0 +1,13 @@
+/home/art/git/basmati_gcp/basmati/
+
+# PROJECT
+
+orders
+
+	/__pycache__
+		*.pyc
+		
+	/migrations	
+		000*.py
+		/__pycache__
+			*.pyc
