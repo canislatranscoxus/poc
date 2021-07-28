@@ -15,9 +15,9 @@ class Del_migration_files:
         try:
             self.projects = None
             self.projects = [
-                'address',
-                'client',
-                'orders',
+                #'address',
+                #'client',
+                #'orders',
                 'ship'
             ]
 
