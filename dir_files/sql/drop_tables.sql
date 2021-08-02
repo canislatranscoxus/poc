@@ -1,8 +1,6 @@
-drop table if exists ship_cp;
-drop table if exists ship_carrier;
-
+drop table if exists ship_mty_metro_area;
 drop table if exists ship_ship;
-drop table if exists ship_shipprovider;
+drop table if exists ship_carrier;
 drop table if exists ship_shiporderitem;
 drop table if exists ship_shiporder;
 
