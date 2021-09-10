@@ -1,12 +1,14 @@
-drop table if exists ship_mty_metro_area;
-drop table if exists ship_ship;
-drop table if exists ship_carrier;
 drop table if exists ship_shiporderitem;
 drop table if exists ship_shiporder;
 
-/*drop table if exists orders_orderitem;
+drop table if exists orders_orderitem;
 drop table if exists orders_order;
-drop table if exists address_address;
+
+drop table if exists ship_mty_metro_area;
+drop table if exists ship_ship;
+drop table if exists ship_carrier;
+
+/*drop table if exists address_address;
 drop table if exists client_client; */
 
 /*INSERT INTO `basmati`.`ship_ship` VALUES

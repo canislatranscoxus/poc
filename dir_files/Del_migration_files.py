@@ -15,10 +15,16 @@ class Del_migration_files:
         try:
             self.projects = None
             self.projects = [
-                #'address',
-                #'client',
-                #'orders',
-                'ship'
+                'address', 
+                'cart',
+                'client',
+                'coupons',
+                'locale', 
+                'orders',
+                'payment',
+                'qshop',
+                'ship',
+                'shop'
             ]
 
             print( '\n projects: \n' )
