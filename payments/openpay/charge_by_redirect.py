@@ -39,6 +39,7 @@ output:
 links:
     https://www.openpay.mx/docs/op-form-charge.html
     https://www.openpay.mx/api/?shell#con-redireccionamiento
+    https://www.openpay.mx/docs/testing.html
 
 '''
 
@@ -55,9 +56,9 @@ OPENPAY_PRIVATE_KEY = os.environ[ 'OPENPAY_PRIVATE_KEY' ]
 url = '{}{}/charges'.format( OPENPAY_URL, OPENPAY_MERCHANT_ID)
 data = {
    "method"         : "card",
-   "amount"         : 100,
+   "amount"         : 49,
    "description"    : "Cargo inicial a mi cuenta",
-   "order_id"       : "oid-00051",
+   "order_id"       : "oid-001",
    
    "customer"       : {
         "name"          : "Juan",
