@@ -67,12 +67,31 @@ customer = openpay.Customer.create(
 print( customer )
 
 
-# get a customer
-customer_id = 'amce5ycvwycfzyarjf8l'
-customer = openpay.Customer.retrieve( customer_id  )
 
 
+# create card to a customer
+card = customer.cards.create(
+    card_number="4111111111111111",
+    holder_name="Juan Perez Ramirez",
+    expiration_year="20",
+    expiration_month="12",
+    cvv2="110",
+    address={
+        "city": "Querétaro",
+        "country_code": "MX",
+        "postal_code": "76900",
+        "line1": "Av 5 de Febrero",
+        "line2": "Roble 207",
+        "line3": "col carrillo",
+        "state": "Queretaro"
+    })
 
+print( card )
+
+# get all cards from customer
+cards = customer.cards.all()
+for card in cards:
+    print( card )
 
 
 

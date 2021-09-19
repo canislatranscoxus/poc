@@ -1,1 +1,2 @@
 openpay==0.6 
+requests==2.26.0
