@@ -1,14 +1,13 @@
 '''
 description: This class wraps the openpay charges functionality.
+             Here we request a charge by redirection, and get list of charges.
              Behind the scenes we call openpay API.
-
 
 links:
     https://www.openpay.mx/docs/op-form-charge.html
     https://www.openpay.mx/api/?shell#con-redireccionamiento
     https://www.openpay.mx/docs/testing.html
     https://www.openpay.mx/api/?shell#listado-de-cargos
-
 '''
 
 import json
