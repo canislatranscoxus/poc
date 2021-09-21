@@ -7,32 +7,37 @@ to create a charge to a card by redirection.
 We do not store card data, the user is paying directly in openpay website.
 
 output:
-{   
-    'id': 'tra91gn89a7qzaaoqwbo', 
-    'authorization': None, 
-    'operation_type': 'in', 
-    'transaction_type': 'charge', 'status': 'charge_pending', 'conciliated': False, 
-    'creation_date': '2021-09-18T21:40:01-05:00', 'operation_date': '2021-09-18T21:40:01-05:00', 
-    'description': 'Cargo inicial a mi cuenta', 'error_message': None, 
-    'order_id': 'oid-00051', 
-    
-    'payment_method': {
-        'type': 'redirect', 
-        'url': 'https://sandbox-api.openpay.mx/v1/mw31nv2zyvign0j9c7js/charges/tra91gn89a7qzaaoqwbo/card_capture'
-        }, 
-        
-    'amount': 100.0, 
-    'currency': 'MXN', 
-    
-    'customer': {
-        'name': 'Juan', 'last_name': 'Vazquez Juarez', 'email': 'juan.vazquez@empresa.com.mx', 
-        'phone_number': '4423456723', 
-        'address': None, 'creation_date': '2021-09-18T21:40:00-05:00', 'external_id': None, 
-        'clabe': None
-        }, 
-    
-    'method': 'card'}
-
+status code: 200
+{
+   "id": "tr3nbzn5dgypqpqfeucb",
+   "authorization": null,
+   "operation_type": "in",
+   "transaction_type": "charge",
+   "status": "charge_pending",
+   "conciliated": false,
+   "creation_date": "2021-09-20T17:24:23-05:00",
+   "operation_date": "2021-09-20T17:24:23-05:00",
+   "description": "Cargo inicial a mi cuenta",
+   "error_message": null,
+   "order_id": "oid-002",
+   "payment_method": {
+      "type": "redirect",
+      "url": "https://sandbox-api.openpay.mx/v1/mw31nv2zyvign0j9c7js/charges/tr3nbzn5dgypqpqfeucb/card_capture"
+   },
+   "amount": 2.22,
+   "currency": "MXN",
+   "customer": {
+      "name": "Juan",
+      "last_name": "Vazquez Juarez",
+      "email": "juan.vazquez@empresa.com.mx",
+      "phone_number": "4423456723",
+      "address": null,
+      "creation_date": "2021-09-20T17:24:21-05:00",
+      "external_id": null,
+      "clabe": null
+   },
+   "method": "card"
+}
 
 
 
@@ -56,9 +61,9 @@ OPENPAY_PRIVATE_KEY = os.environ[ 'OPENPAY_PRIVATE_KEY' ]
 url = '{}{}/charges'.format( OPENPAY_URL, OPENPAY_MERCHANT_ID)
 data = {
    "method"         : "card",
-   "amount"         : 49,
-   "description"    : "Cargo inicial a mi cuenta",
-   "order_id"       : "oid-001",
+   "amount"         : 3.03,
+   "description"    : "3 gorras adidas",
+   "order_id"       : "oid-003",
    
    "customer"       : {
         "name"          : "Juan",
