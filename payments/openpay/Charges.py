@@ -46,19 +46,22 @@ class Charges:
 
 
     def get_list_where( self, params ):
-        '''get the list of charges, using the param json as filter.'''
+        '''get the list of charges, using the params as filter.
 
-        '''params = {
-        'order_id' :
-        'creation' :
+        params: json. It is a dictionary that contain all the parameters used in the filter.
+                It has the next structure
+
+        params = {
+        'order_id'      :
+        'creation'      :
         'creation[gte]' :
         'creation[lte]' :
-        'offset' :
-        'limit' :
-        'amount' :
-        'amount[gte]' :
-        'amount[lte]' :
-        'status' :        
+        'offset'        :
+        'limit'         :
+        'amount'        :
+        'amount[gte]'   :
+        'amount[lte]'   :
+        'status'        :        
         }'''
 
         response = requests.get( self.url
