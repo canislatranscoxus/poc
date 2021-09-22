@@ -43,8 +43,13 @@ class Charges:
 
         return response
 
+    def get_all( self ):
+        response = requests.get( self.url
+        , headers   = self.headers
+        , auth      = self.auth )
+        return response
 
-    def get_list_where( self, params ):
+    def get_list_where( self, params=None ):
         '''get the list of charges, using the params as filter.
 
         params: json. It is a dictionary that contain all the parameters used in the filter.
@@ -63,12 +68,18 @@ class Charges:
         'status'        :        
         }'''
 
-        response = requests.get( self.url
+        if params == None:
+            response = requests.get( self.url
+            , headers   = self.headers
+            , auth      = self.auth )
+        else:
+            response = requests.get( self.url
             , params    = params
             , headers   = self.headers
             , auth      = self.auth )
         
         return response
+
 
     def get_list( self, order_id ):
         ''' get the list of charges filtering by one order_id. '''

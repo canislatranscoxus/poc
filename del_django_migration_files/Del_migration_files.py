@@ -12,19 +12,20 @@ class Del_migration_files:
     projects = None
 
     def set_projects( self ):
+        '''here we set which project we want clean from migration files.'''
         try:
             self.projects = None
             self.projects = [
-                'address', 
-                'cart',
-                'client',
-                'coupons',
-                'locale', 
-                'orders',
-                'payment',
-                'qshop',
-                'ship',
-                'shop'
+                 'address' 
+                , 'cart'
+                , 'client'
+                , 'coupons'
+                , 'locale' 
+                ,'orders'
+                , 'payment'
+                , 'qshop'
+                , 'ship'
+                , 'shop'
             ]
 
             print( '\n projects: \n' )
@@ -35,6 +36,7 @@ class Del_migration_files:
             print( 'Del_migration_files.set_projects(), error: {}'.format( e ) )
 
     def get_migration_files( self, project ):
+        '''We get all the migration files from one project'''
         try:        
             a = []
             prj_dir = path.join( self.base_dir, project )
@@ -61,6 +63,7 @@ class Del_migration_files:
 
 
     def delete_files( self, migration_files ):
+        '''Here we delete all the migration files, usually from one project.'''
         print( '\n deleting... \n' )
         for f in migration_files:
             try:
