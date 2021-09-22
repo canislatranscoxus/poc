@@ -90,6 +90,18 @@ class Charges:
         response = self.get_list_where( params )
         return response
 
+    def get_charge( self, order_id ):
+        ''' get the first charge (from openpay )of order_id'''
+        charges     = Charges()        
+        status= None
+        try:
+            orders      = charges.get_list( order_id )
+            j = orders.json()
+            return j[ 0 ]
+        except Exception as e:
+            print( 'payment.openpay.Charges.get_charge(), error: {}'.format( e ) )
+            return None            
+
 
 
 
