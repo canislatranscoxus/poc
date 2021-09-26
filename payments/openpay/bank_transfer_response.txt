@@ -1,0 +1,39 @@
+{
+   "id"                 : "trrprnpfzzfxh8cel64g",
+   "authorization"      : null,
+   "operation_type"     : "in",
+   "transaction_type"   : "charge",
+   "status"             : "in_progress",
+   "conciliated"        : false,
+   "creation_date"      : "2021-09-25T20:04:55-05:00",
+   "operation_date"     : "2021-09-25T20:04:55-05:00",
+   "description"        : "Cargo con banco",
+   "error_message"      : null,
+   "order_id"           : "Boid_003",
+   "due_date"           : "2021-10-01T23:59:59-05:00",
+
+   "payment_method": {
+      "type"        : "bank_transfer",
+      "bank"        : "BBVA Bancomer",
+      "clabe"       : "000000000000000001",
+      "agreement"   : "0000000",
+      "name"        : "11178471677528833292"
+   },
+
+   "amount"     : 100.0,
+   "currency"   : "MXN",
+
+   "customer"   : {
+      "name"          : "Mickey",
+      "last_name"     : "Mouse",
+      "email"         : "mickey.mouse@disney.com",
+      "phone_number"  : "4423456723",
+      "address"       : null,
+      "creation_date" : "2021-09-25T20:04:55-05:00",
+      "external_id"   : null,
+      "clabe"         : null
+   },
+   
+   "method"     : "bank_account"
+}
+ 

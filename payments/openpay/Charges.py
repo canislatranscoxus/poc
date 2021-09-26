@@ -24,6 +24,15 @@ class Charges:
     headers = None
     auth    = None
 
+    def request_bank_ref( self, data ) :
+        response = requests.post( self.url
+            , data      = json.dumps( data )
+            , headers   = self.headers
+            , auth      = self.auth )
+
+        return response
+
+
     def request_redirect_charge( self, data ):
         '''request to openpay site a link to make a charge by redirection.
         If everything looks ok, 
