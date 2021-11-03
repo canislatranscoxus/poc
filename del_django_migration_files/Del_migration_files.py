@@ -21,11 +21,13 @@ class Del_migration_files:
                 , 'client'
                 , 'coupons'
                 , 'locale' 
-                ,'orders'
+                , 'orders'
                 , 'payment'
                 , 'qshop'
+                , 'reports'
                 , 'ship'
                 , 'shop'
+                , 'webhook'
             ]
 
             print( '\n projects: \n' )
