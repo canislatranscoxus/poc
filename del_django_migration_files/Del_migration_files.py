@@ -93,7 +93,7 @@ class Del_migration_files:
         self.set_projects()
 
 if __name__ == '__main__':
-    base_dir = '/home/art/git/basmati_gcp/basmati/'
+    base_dir = '/home/art/git/cbd/basmati/'
     del_migration_files = Del_migration_files( base_dir = base_dir )
     del_migration_files.run()
     print( 'end. \n\n' )
