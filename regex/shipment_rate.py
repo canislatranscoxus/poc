@@ -1,3 +1,7 @@
+'''
+Description: in this example we extract the numbers from strings.
+             The idea is to know the shipment rate.
+'''
 
 import re
 
