@@ -58,12 +58,13 @@ OPENPAY_MERCHANT_ID = os.environ[ 'OPENPAY_MERCHANT_ID' ]
 OPENPAY_PRIVATE_KEY = os.environ[ 'OPENPAY_PRIVATE_KEY' ]
 
 url = '{}{}/charges'.format( OPENPAY_URL, OPENPAY_MERCHANT_ID)
-data = {
-   "method"         : "card",
-   "amount"         : 256.69,
-   "description"    : "Mascota Feliz",
-   "order_id"       : "local_nov19_006",
-   
+
+data = { 
+   "method": "card", 
+   "amount": 944.0, 
+   "description": "Oasisverde", 
+   "order_id": "local_nov22_0955_03", 
+
    "customer"       : {
         "name"          : "Snoop",
         "last_name"     : "Dogg",
@@ -71,12 +72,22 @@ data = {
         "email"         : "snoop.dogg@gmail.com"
    },
 
-   "confirm"        : "false",
-   "send_email"     : "false",
-   "redirect_url"   : "http://www.openpay.mx/index.html"
+   "confirm": "false", 
+   "send_email": "false", 
+   #"redirect_url": "https://127.0.0.1:8000/" # fail
+
+   "redirect_url"   : "http://www.basmatiyes.com"  # OK
+   #"redirect_url"   : "http://www.openpay.mx/index.html"  # OK
 }
 
+
 headers = {'Content-type': 'application/json' }
+auth      = ( OPENPAY_PRIVATE_KEY, None )
+
+print( 'url     :{}'.format( url     ) )
+print( 'headers :{}'.format( headers ) )
+print( 'auth    :{}'.format( auth    ) )
+
 
 # request charge
 r = requests.post( url
