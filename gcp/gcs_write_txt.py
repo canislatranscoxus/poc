@@ -1,5 +1,5 @@
 '''
-write a txt file in gcp Cloud Storage 
+write a txt file in Google gcp Cloud Storage 
 
 pip install GoogleAppEngineCloudStorageClient
 

@@ -2,7 +2,7 @@
 This is a small test using redis in python.
 
 
-on gcp
+on google gcp
 
 sudo apt-get install telnet
 
