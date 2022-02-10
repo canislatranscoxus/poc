@@ -1,6 +1,5 @@
-
-from dataclasses import dataclass
 import json
+from ntpath import join
 import os
 import requests
 
@@ -9,45 +8,100 @@ from ICourier import ICourier
 
 class CourierClicoh( ICourier ):
 
-    def request_tokens( self, params ):
+    access_token  = None
+    refresh_token = None
+
+    def request_tokens( self ):
         # use the API to request Access Token and Refresh Token, and save them to redis.
+        j = None
         try:
-            url     = self.CLICOH_URL
-            headers = {'Content-type': 'application/json' }
-            auth    = ( self.OPENPAY_PRIVATE_KEY, None ) 
+            url     = join( self.CLICOH_URL, 'token/' ) 
+            headers = { 'Content-type'  : 'application/json'}
+            #auth    = ( self.CLICOH_USER, self.CLICOH_PASS ) 
             data    = {
                         'username' : self.CLICOH_USER,
                         'password' : self.CLICOH_PASS,
                       }
 
-            response = requests.post( self.url
+            response = requests.post( url
                 , data      = json.dumps( data )
-                , headers   = self.headers
-                , auth      = self.auth )
+                , headers   = headers
+                #, auth      = auth 
+                )
 
-            j = json.loads( response )
-            print( json.dumps( response, indent = 3  ) )
-
-
-            return response
-
-
+            j = response.json()
+            self.access_token  = j[ 'access'  ]
+            self.refresh_token = j[ 'refresh' ]
+            print( json.dumps( j, indent = 3  ) )
 
         except Exception as e:
-            print( 'request_tokens().' )
+            print( 'CourierClicoh.request_tokens(), error: {}'.format( e ) )
+            #j = None
+        finally:
+            return j
 
-    def get_tokens( self, params ):
+    '''def cache_tokens( self, params ):
+        #save tokens to redis
+        pass
+
+
+    def get_tokens_from_redis( self, params ):
         #get tokens from redis
-        pass
+        pass'''
 
-    def get_
+    def call_api( self, method, uri, data = None ):
+        try:
+            url     = join( self.CLICOH_URL, uri )
+            j = {}
+            i = 0
+            while i < 2:
+                i = i +1
+                headers = { 'Content-type'  : 'application/json',
+                            'Authorization' : 'Bearer {}'.format( self.access_token ) 
+                          }
 
-    def get_at( self, params ):
-        pass
+                if method == 'POST':
+                    response = requests.post( url, headers = headers )
+                else:
+                    response = requests.get ( url, headers = headers )
+                
+                if response.status_code >= 400 and response.status_code < 500:
+                    self.request_tokens()
+                    continue
+
+                j = response.json()
+                break
+
+            return j
+
+        except Exception as e:
+            print( 'CourierDebug.get_menu_rates(), ... {}'.format( e ) )
+            raise
+
+    
+    def get_products( self ):
+        try:
+            uri = 'public/v1/products/'
+            j = self.call_api( 'GET', uri )
+            print( json.dumps( j ) )
+            return j
+
+        except Exception as e:
+            print( 'CourierDebug.get_products(), ... {}'.format( e ) )
+            raise
 
 
     def get_rates( self, params ):
         '''use the api and get the prices. The data usually is row and we need to parse and clean.'''
+
+        # loop 2 times
+        # call api
+        # if token expired try again
+
+        # read response
+
+        # return values
+
         pass
 
     def get_menu_rates( self, params ):
@@ -98,13 +152,16 @@ class CourierClicoh( ICourier ):
 
 
 
-    def __init__( self, params=None ):
-        if params == None:
+    def __init__( self, params = None ):
+        try:
+           
             self.CLICOH_URL  = os.environ[ 'CLICOH_URL'  ]
             self.CLICOH_USER = os.environ[ 'CLICOH_USER' ]
             self.CLICOH_PASS = os.environ[ 'CLICOH_PASS' ]
-        else:
-            self.CLICOH_URL  = params[ 'CLICOH_URL'  ]
-            self.CLICOH_USER = params[ 'CLICOH_USER' ]
-            self.CLICOH_PASS = params[ 'CLICOH_PASS' ]
 
+            if params != None:
+                self.access_token  = params[ 'access_token'  ]
+                self.refresh_token = params[ 'refresh_token' ]
+
+        except Exception as e:
+            print( 'CourierClicoh.__init__(), error: {}'.format( e ) )
