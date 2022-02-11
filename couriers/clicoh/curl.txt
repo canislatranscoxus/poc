@@ -1,0 +1,18 @@
+curl --location --request POST 'https://sandbox-api.clicoh.com/api/public/v1/products/' \
+--header 'Authorization: Bearer my_token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name"          : "Gotero de CBD 500mg",
+    "description"   : "El aceite de HEMP de cáñamo THE CANNA RAW MX es una manera efectiva de disfrutar de todos sus beneficios. Nuestra materia prima proveniente de cáñamo agrícola orgánico, libre de OMG, gluten y vegano.",
+    "variants"      : [ 
+    {
+        "sku"           : "07502307940032",
+        "is_active": "true",
+        "variant": {
+            "weight"        : 0.08,
+            "width"         : 4,
+            "height"        : 11,
+            "length"        : 4
+        }
+    } ]
+}'

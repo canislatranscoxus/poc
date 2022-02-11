@@ -7,7 +7,7 @@ def utf8_to_ascii( utf8_string ):
     return ascii_data
 
 
-s           = '\x80 😀 à á ä UTF-8 DATA'
+s           = '\x80 😀 ñà Ñá ä  UTF-8 DATA'
 ascii_data = utf8_to_ascii( s )
 
 print( 's         : {}'.format( s          ) )

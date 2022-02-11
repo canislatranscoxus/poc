@@ -48,21 +48,8 @@ class ETL:
             while len( rows ) > 0:
                 products = []
                 for row in rows:
-                    print( '\n {}'.format( row ) )
-                    #j = courier.add_product( row )
-
-                    p = {
-                        'name'          : 'Gotero de CBD 500mg',
-                        'description'   : 'El aceite de HEMP de cáñamo THE CANNA RAW MX es una manera efectiva de disfrutar de todos sus beneficios. Nuestra materia prima proveniente de cáñamo agrícola orgánico, libre de OMG, gluten y vegano.',
-
-                        'sku'           : '07502307940032',
-                        'weight'        : 0.08,
-                        'width'         : 4,
-                        'height'        : 11,
-                        'length'        : 4
-                    }
-                    j = courier.add_product( p )
-
+                    print( 'id : {}'.format( row[ 'id' ] ) )
+                    j = courier.add_product( row )
 
                     product  = transformer.get_csv_row( j, row )
                     '''d = {
@@ -77,6 +64,7 @@ class ETL:
                 rows = extractor.get_next_batch( num_of_rows )
 
             extractor.close()
+            print( '\n ETL.procell_all() ... end' )
 
         except Exception as e:
             print( 'ETL.process_all(), error: {}'.format( e ) )

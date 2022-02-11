@@ -19,13 +19,13 @@ class Extractor:
     end_id   = None 
 
     sql_base = """  
-        SELECT  p.id as id,
-                p.sku,
+        SELECT  p.id  ,
+                p.sku ,
                 t.name,
                 t.description,
-                p.width  as width,
-                p.height as height,  
-                p.length as length,
+                p.width  ,
+                p.height ,  
+                p.length ,
                 p.weight
         FROM    shop_product              p join 
                 shop_product_translation  t on  p.id = t.master_id 

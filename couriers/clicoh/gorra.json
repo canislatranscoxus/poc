@@ -1,0 +1,16 @@
+{
+    "name"          : "Gorra Roja",
+    "description"   : "Gorra roja de algodon.",
+    "variants"      : [ 
+        {
+            "sku"           : "07502307940032",
+            "is_active": "true",
+            "variant": {
+                "weight"        : 0.01,
+                "width"         : 4,
+                "height"        : 11,
+                "length"        : 4
+            }
+        } 
+    ]
+}

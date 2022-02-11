@@ -3,7 +3,7 @@ import csv
 class LoaderCsv:
 
     # csv header
-    fieldnames  = [ 'id', 'sku', 'clicoh_id', 'clicoh_variant_id' ]
+    fieldnames  = [ 'id', 'name', 'sku', 'clicoh_id', 'clicoh_variant_id' ]
 
     f           = None # TextIOWrapper 
     writer      = None

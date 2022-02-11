@@ -1,10 +1,11 @@
 import json
-from ntpath import join
 import os
 import requests
+import unidecode
+from os.path    import join
+from datetime   import datetime
 
-from datetime import datetime
-from ICourier import ICourier
+from ICourier   import ICourier
 
 class CourierClicoh( ICourier ):
 
@@ -46,6 +47,10 @@ class CourierClicoh( ICourier ):
             url     = join( self.CLICOH_URL, uri )
             j = {}
             i = 0
+            
+            if self.access_token == None:
+                self.request_tokens()
+
             while i < 2:
                 i = i +1
                 headers = { 'Content-type'  : 'application/json',
@@ -53,9 +58,9 @@ class CourierClicoh( ICourier ):
                           }
 
                 if method == 'POST':
-                    response = requests.post( url, headers = headers, data = data )
+                    response = requests.post( url, headers = headers, data = json.dumps( data ) )
                 else:
-                    response = requests.get ( url, headers = headers, data = data )
+                    response = requests.get ( url, headers = headers, data = json.dumps( data ) )
 
                 if response.status_code >= 400 and response.status_code < 500:
                     self.request_tokens()
@@ -71,7 +76,15 @@ class CourierClicoh( ICourier ):
             print( 'CourierDebug.get_menu_rates(), ... {}'.format( e ) )
             raise
 
+
+
+    def utf8_to_ascii( self, utf8_string ):
+        # remove accents
+        data        = unidecode.unidecode( utf8_string )
+        ascii_data  = data.encode( "ascii","replace" )
+        return data
     
+
     def get_products( self ):
         try:
             uri = 'public/v1/products/'
@@ -87,8 +100,8 @@ class CourierClicoh( ICourier ):
         try:
             uri = 'public/v1/products/'
             data =  {
-                "name"          : product[ 'name' ],
-                "description"   : product[ 'description' ],
+                "name"          : self.utf8_to_ascii( product[ 'name' ] ),
+                "description"   : self.utf8_to_ascii( product[ 'description' ][:150] ),
                 "variants"      : [
                     {
                         "sku"       : product[ 'sku' ],
@@ -103,8 +116,7 @@ class CourierClicoh( ICourier ):
                 ]
             }
 
-            print( json.dumps( data, indent = 3 ) )    
-
+            #print( json.dumps( data, indent = 3 ) )    
             j = self.call_api( 'POST', uri, data )
             return j
 
