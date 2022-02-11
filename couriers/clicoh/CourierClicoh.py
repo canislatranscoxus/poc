@@ -32,7 +32,7 @@ class CourierClicoh( ICourier ):
             j = response.json()
             self.access_token  = j[ 'access'  ]
             self.refresh_token = j[ 'refresh' ]
-            print( json.dumps( j, indent = 3  ) )
+            #print( json.dumps( j, indent = 3  ) )
 
         except Exception as e:
             print( 'CourierClicoh.request_tokens(), error: {}'.format( e ) )
@@ -40,16 +40,8 @@ class CourierClicoh( ICourier ):
         finally:
             return j
 
-    '''def cache_tokens( self, params ):
-        #save tokens to redis
-        pass
-
-
-    def get_tokens_from_redis( self, params ):
-        #get tokens from redis
-        pass'''
-
     def call_api( self, method, uri, data = None ):
+        status_code = ''
         try:
             url     = join( self.CLICOH_URL, uri )
             j = {}
@@ -61,10 +53,10 @@ class CourierClicoh( ICourier ):
                           }
 
                 if method == 'POST':
-                    response = requests.post( url, headers = headers )
+                    response = requests.post( url, headers = headers, data = data )
                 else:
-                    response = requests.get ( url, headers = headers )
-                
+                    response = requests.get ( url, headers = headers, data = data )
+
                 if response.status_code >= 400 and response.status_code < 500:
                     self.request_tokens()
                     continue
@@ -72,6 +64,7 @@ class CourierClicoh( ICourier ):
                 j = response.json()
                 break
 
+            j[ 'status_code' ] = response.status_code
             return j
 
         except Exception as e:
@@ -83,13 +76,41 @@ class CourierClicoh( ICourier ):
         try:
             uri = 'public/v1/products/'
             j = self.call_api( 'GET', uri )
-            print( json.dumps( j ) )
+            #print( json.dumps( j ) )
             return j
 
         except Exception as e:
             print( 'CourierDebug.get_products(), ... {}'.format( e ) )
             raise
 
+    def add_product( self, product ):
+        try:
+            uri = 'public/v1/products/'
+            data =  {
+                "name"          : product[ 'name' ],
+                "description"   : product[ 'description' ],
+                "variants"      : [
+                    {
+                        "sku"       : product[ 'sku' ],
+                        "is_active" : 'true',
+                        "variant"   : {
+                            "weight"    : product[ 'weight' ],
+                            "width"     : int( product[ 'width'  ] ),
+                            "height"    : int( product[ 'height' ] ),
+                            "length"    : int( product[ 'length' ] )
+                        }
+                    }
+                ]
+            }
+
+            print( json.dumps( data, indent = 3 ) )    
+
+            j = self.call_api( 'POST', uri, data )
+            return j
+
+        except Exception as e:
+            print( 'CourierDebug.get_products(), ... {}'.format( e ) )
+            raise
 
     def get_rates( self, params ):
         '''use the api and get the prices. The data usually is row and we need to parse and clean.'''
