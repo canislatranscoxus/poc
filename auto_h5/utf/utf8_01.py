@@ -2,7 +2,7 @@
 Convert String  -> byte_array -> utf8 -> ascii
 '''
 
-s           = '\x80 😀 UTF-8 DATA'
+s           = '\x80 😀 à á ä UTF-8 DATA'
 
 #data        = b'\x80 \0xF0 UTF-8 DATA'
 data = str.encode( s)
