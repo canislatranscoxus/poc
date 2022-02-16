@@ -1,0 +1,15 @@
+{
+    "dhl001": {
+        "desc"          : "DHL 1 day  $100.00", 
+        "service"       : "DHL Express", 
+        "price"         : 100.0, 
+        "courier"       : "DHL", 
+        "arriving_time" : "1 day", 
+        "courier_class" : "CourierDebug"}, 
+
+    "dhl002": {"desc": "DHL 3 days $ 50.00", "service": "DHL Regular", "price": 50.0, "courier": "DHL", "arriving_time": "3 days", "courier_class": "CourierDebug"}, 
+    "ups001": {"desc": "UPS 1 day  $ 99.00", "service": "UPS Critical", "price": 99.0, "courier": "UPS", "arriving_time": "1 day", "courier_class": "CourierDebug"}, 
+    "ups002": {"desc": "UPS 3 days $ 47.00", "service": "UPS domestic", "price": 47.0, "courier": "UPS", "arriving_time": "3 days", "courier_class": "CourierDebug"}, 
+    "fedex01": {"desc": "Fedex 1 day  $ 95.00", "service": "Fedex Urgent", "price": 95.0, "courier": "DHL", "arriving_time": "1 day", "courier_class": "CourierFedex"}, 
+    "fedex02": {"desc": "Fedex 3 days $ 45.00", "service": "Fedex Regular", "price": 45.0, "courier": "DHL", "arriving_time": "3 days", "courier_class": "CourierFedex"}
+}

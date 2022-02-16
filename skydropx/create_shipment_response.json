@@ -1,0 +1,574 @@
+{
+    "data": {
+        "id": "19193",
+        "type": "shipments",
+        "attributes": {
+            "status": "WAITING",
+            "created_at": "2022-02-16T11:47:58.502-06:00",
+            "updated_at": "2022-02-16T11:47:58.541-06:00"
+        },
+        "relationships": {
+            "parcels": {
+                "data": [
+                    {
+                        "id": "19533",
+                        "type": "parcels"
+                    }
+                ]
+            },
+            "rates": {
+                "data": [
+                    {
+                        "id": "95913",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95914",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95930",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95929",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95928",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95927",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95926",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95925",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95924",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95923",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95922",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95921",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95920",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95919",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95918",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95917",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95916",
+                        "type": "rates"
+                    },
+                    {
+                        "id": "95915",
+                        "type": "rates"
+                    }
+                ]
+            },
+            "address_to": {
+                "data": {
+                    "id": "38885",
+                    "type": "addresses"
+                }
+            },
+            "address_from": {
+                "data": {
+                    "id": "38884",
+                    "type": "addresses"
+                }
+            },
+            "labels": {
+                "data": []
+            },
+            "consignment_note_product_class": {
+                "data": {
+                    "id": 3115,
+                    "name": "Baño y cuerpo",
+                    "code": "53131600",
+                    "subcategory_id": 288,
+                    "created_at": "2021-12-03T12:27:34.662-06:00",
+                    "updated_at": "2021-12-03T12:27:34.662-06:00"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "19533",
+            "type": "parcels",
+            "attributes": {
+                "length": "10.0",
+                "height": "10.0",
+                "width": "10.0",
+                "weight": "3.0",
+                "mass_unit": "KG",
+                "distance_unit": "CM"
+            }
+        },
+        {
+            "id": "95913",
+            "type": "rates",
+            "attributes": {
+                "created_at"            : "2022-02-16T11:47:58.650-06:00",
+                "updated_at"            : "2022-02-16T11:48:00.918-06:00",
+                "amount_local"          : "158.0",
+                "currency_local"        : "MXN",
+                "provider"              : "FEDEX",
+                "service_level_name"    : "Fedex Express Saver",
+                "service_level_code"    : "FEDEX_EXPRESS_SAVER",
+                "service_level_terms"   : null,
+                "days"                  : 5,
+                "duration_terms"        : null,
+                "zone"                  : null,
+                "arrives_by"            : null,
+                "out_of_area"           : false,
+                "out_of_area_pricing"   : "0.0",
+                "total_pricing"         : "158.0",
+                "is_ocurre"             : false
+            }
+        },
+        {
+            "id": "95914",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:58.656-06:00",
+                "updated_at": "2022-02-16T11:48:00.912-06:00",
+                "amount_local": "232.0",
+                "currency_local": "MXN",
+                "provider": "FEDEX",
+                "service_level_name": "Standard Overnight",
+                "service_level_code": "STANDARD_OVERNIGHT",
+                "service_level_terms": null,
+                "days": 2,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "232.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95930",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:48:00.737-06:00",
+                "updated_at": "2022-02-16T11:48:00.795-06:00",
+                "amount_local": "103.0",
+                "currency_local": "MXN",
+                "provider": "MENSAJEROSURBANOS",
+                "service_level_name": "STANDARD",
+                "service_level_code": "STANDARD",
+                "service_level_terms": null,
+                "days": 1,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "103.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95929",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.714-06:00",
+                "updated_at": "2022-02-16T11:48:00.803-06:00",
+                "amount_local": "107.0",
+                "currency_local": "MXN",
+                "provider": "NINETYNINEMINUTES",
+                "service_level_name": "Día siguiente",
+                "service_level_code": "nextDay",
+                "service_level_terms": null,
+                "days": 2,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "107.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95928",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.709-06:00",
+                "updated_at": "2022-02-16T11:48:00.809-06:00",
+                "amount_local": "107.0",
+                "currency_local": "MXN",
+                "provider": "NINETYNINEMINUTES",
+                "service_level_name": "Mismo día",
+                "service_level_code": "sameDay",
+                "service_level_terms": null,
+                "days": 1,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "107.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95927",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.587-06:00",
+                "updated_at": "2022-02-16T11:48:00.825-06:00",
+                "amount_local": "177.0",
+                "currency_local": "MXN",
+                "provider": "AMPM",
+                "service_level_name": "Standard",
+                "service_level_code": "STANDARD",
+                "service_level_terms": null,
+                "days": 10,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "177.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95926",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.380-06:00",
+                "updated_at": "2022-02-16T11:48:00.831-06:00",
+                "amount_local": "207.0",
+                "currency_local": "MXN",
+                "provider": "SKYDROPX",
+                "service_level_name": "Día Siguiente Premium",
+                "service_level_code": "SKYDROPX_STANDARD_OVERNIGHT_PREMIUM",
+                "service_level_terms": null,
+                "days": 2,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "207.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95925",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.373-06:00",
+                "updated_at": "2022-02-16T11:48:00.837-06:00",
+                "amount_local": "178.0",
+                "currency_local": "MXN",
+                "provider": "SKYDROPX",
+                "service_level_name": "Terrestre Premium",
+                "service_level_code": "SKYDROPX_EXPRESS_SAVER_PREMIUM",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "178.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95924",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.365-06:00",
+                "updated_at": "2022-02-16T11:48:00.843-06:00",
+                "amount_local": "171.0",
+                "currency_local": "MXN",
+                "provider": "SKYDROPX",
+                "service_level_name": "Día Siguiente",
+                "service_level_code": "SKYDROPX_STANDARD_OVERNIGHT",
+                "service_level_terms": null,
+                "days": 3,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "171.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95923",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.357-06:00",
+                "updated_at": "2022-02-16T11:48:00.849-06:00",
+                "amount_local": "130.0",
+                "currency_local": "MXN",
+                "provider": "SKYDROPX",
+                "service_level_name": "Terrestre",
+                "service_level_code": "SKYDROPX_EXPRESS_SAVER",
+                "service_level_terms": null,
+                "days": 6,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "130.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95922",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.282-06:00",
+                "updated_at": "2022-02-16T11:48:00.856-06:00",
+                "amount_local": "89.0",
+                "currency_local": "MXN",
+                "provider": "VENCEDOR",
+                "service_level_name": "Standard",
+                "service_level_code": "STANDARD",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "89.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95921",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.246-06:00",
+                "updated_at": "2022-02-16T11:48:00.868-06:00",
+                "amount_local": "112.0",
+                "currency_local": "MXN",
+                "provider": "ENVIA",
+                "service_level_name": "Regular",
+                "service_level_code": "REGULAR",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "112.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95920",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.100-06:00",
+                "updated_at": "2022-02-16T11:48:00.875-06:00",
+                "amount_local": "134.0",
+                "currency_local": "MXN",
+                "provider": "CARSSA",
+                "service_level_name": "Nacional",
+                "service_level_code": "NACIONAL",
+                "service_level_terms": null,
+                "days": 10,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "134.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95919",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.082-06:00",
+                "updated_at": "2022-02-16T11:48:00.883-06:00",
+                "amount_local": "120.0",
+                "currency_local": "MXN",
+                "provider": "SENDEX",
+                "service_level_name": "Regular",
+                "service_level_code": "REG",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "120.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95918",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:59.044-06:00",
+                "updated_at": "2022-02-16T11:48:00.889-06:00",
+                "amount_local": "216.0",
+                "currency_local": "MXN",
+                "provider": "PAQUETEXPRESS",
+                "service_level_name": "Nacional",
+                "service_level_code": "NACIONAL",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "216.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95917",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:58.953-06:00",
+                "updated_at": "2022-02-16T11:48:00.895-06:00",
+                "amount_local": "286.0",
+                "currency_local": "MXN",
+                "provider": "UPS",
+                "service_level_name": "UPS Express",
+                "service_level_code": "EXPRESS_SAVER",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "286.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95916",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:58.797-06:00",
+                "updated_at": "2022-02-16T11:48:00.900-06:00",
+                "amount_local": "188.0",
+                "currency_local": "MXN",
+                "provider": "ESTAFETA",
+                "service_level_name": "Servicio Express",
+                "service_level_code": "ESTAFETA_NEXT_DAY",
+                "service_level_terms": null,
+                "days": 2,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "188.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "95915",
+            "type": "rates",
+            "attributes": {
+                "created_at": "2022-02-16T11:47:58.792-06:00",
+                "updated_at": "2022-02-16T11:48:00.906-06:00",
+                "amount_local": "149.0",
+                "currency_local": "MXN",
+                "provider": "ESTAFETA",
+                "service_level_name": "Terrestre",
+                "service_level_code": "ESTAFETA_STANDARD",
+                "service_level_terms": null,
+                "days": 5,
+                "duration_terms": null,
+                "zone": null,
+                "arrives_by": null,
+                "out_of_area": false,
+                "out_of_area_pricing": "0.0",
+                "total_pricing": "149.0",
+                "is_ocurre": false
+            }
+        },
+        {
+            "id": "38885",
+            "type": "addresses",
+            "attributes": {
+                "name": "Jorge Fernández",
+                "company": "-",
+                "address1": "Av. Lázaro Cárdenas #234",
+                "address2": "Americana",
+                "city": "Guadalajara",
+                "province": "Jalisco",
+                "zip": "44100",
+                "country": "MX",
+                "phone": "5555555555",
+                "email": "ejemplo@skydropx.com",
+                "created_at": "2022-02-16T11:47:58.499-06:00",
+                "updated_at": "2022-02-16T11:47:58.499-06:00",
+                "reference": "Frente a tienda de abarro",
+                "province_code": "JA",
+                "contents": "proteins"
+            }
+        },
+        {
+            "id": "38884",
+            "type": "addresses",
+            "attributes": {
+                "name": "Jose Fernando",
+                "company": "skydropx",
+                "address1": "Av. Principal #234",
+                "address2": "Centro",
+                "city": "Azcapotzalco",
+                "province": "Ciudad de México",
+                "zip": "02900",
+                "country": "MX",
+                "phone": "5555555555",
+                "email": "skydropx@email.com",
+                "created_at": "2022-02-16T11:47:58.495-06:00",
+                "updated_at": "2022-02-16T11:47:58.495-06:00",
+                "reference": null,
+                "province_code": "DF",
+                "contents": null
+            }
+        }
+    ]
+}
