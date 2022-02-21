@@ -24,7 +24,13 @@
             //var selected = $( "#animals_order_by" ).val();
             var selected = document.getElementById("animalsOrder").value;
 
-            $( "#order_value" ).text( "selected value: " + selected );
+            var val_asc  = $( "input:radio[name='animals_asc']:checked"  ).val();
+            var val_desc = $( "input:radio[name='animals_desc']:checked" ).val();
+
+
+            $( "#order_value" ).text( "selected value: " + selected 
+                + "\n   animals_asc : " + val_asc
+                + "\n ; animals_desc: " + val_desc );
 
             if (selected === "asc" ) {
                 $( "#animals_asc"  ).show();
@@ -33,6 +39,23 @@
             else {
                 $( "#animals_asc"  ).hide();
                 $( "#animals_desc" ).show();
+            }
+        }
+
+        function onChangeAsc(){
+            var val_asc  = $( "input:radio[name='animals_asc']:checked"  ).val();
+            var val_desc = $( "input:radio[name='animals_desc']:checked" ).val();
+
+            if ( val_asc != val_desc ){
+                $("input:radio[name= 'animals_desc' ]").val([ val_asc ]);
+            }
+                
+        }
+        function onChangeDesc(){
+            var val_asc  = $( "input:radio[name='animals_asc']:checked"  ).val();
+            var val_desc = $( "input:radio[name='animals_desc']:checked" ).val();
+            if ( val_asc != val_desc ){
+                $("input:radio[name= 'animals_asc' ]").val([ val_desc ]);
             }
         }
         
@@ -51,31 +74,31 @@
     </select>
 
 
-    <div class="animals_asc" id="animals_asc" onchange="select_animal()" >
+    <div class="animals_asc" id="animals_asc" onchange="onChangeAsc()" >
         <input type="radio" id="az_choice1"
-               name="contact" value="ant">
+               name="animals_asc" value="ant">
         <label for="az_choice1">ant - cooperate to win</label><br>
 
         <input type="radio" id="az_choice2"
-               name="contact" value="mongoose">
+               name="animals_asc" value="mongoose">
         <label for="az_choice2">mongoose - resilient and inmune to venom</label><br>
 
         <input type="radio" id="az_choice3"
-               name="contact" value="wasp">
+               name="animals_asc" value="wasp">
         <label for="az_choice3">wasp - alert and fast</label><br>
     </div>
 
-    <div class="animals_desc" id="animals_desc" onchange="select_animal()" >
+    <div class="animals_desc" id="animals_desc" onchange="onChangeDesc()" >
         <input type="radio" id="za_choice1"
-               name="contact" value="wasp">
+               name="animals_desc" value="wasp">
         <label for="za_choice1">wasp - alert and fast</label><br>
 
         <input type="radio" id="za_choice2"
-               name="contact" value="mongoose">
+               name="animals_desc" value="mongoose">
         <label for="za_choice2">mongoose - resilient and inmune to venom</label><br>
 
         <input type="radio" id="za_choice3"
-               name="contact" value="ant">
+               name="animals_desc" value="ant">
         <label for="za_choice3">ant - cooperate to win</label><br>
     </div>
 
