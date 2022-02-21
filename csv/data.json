@@ -1,0 +1,20 @@
+[
+    {"desc": "Fedex Express Saver 5 dias 158.0",    "service": "Fedex Express Saver", "price":  158.0 , "courier": "FEDEX", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Standard Overnight 2 dias 232.0",     "service": "Standard Overnight", "price":  232.0 , "courier": "FEDEX", "arriving_time": 2, "courier_class": "CourierSkydropx"},
+    {"desc": "STANDARD 1 dias 103.0",               "service": "STANDARD", "price":  103.0 , "courier": "MENSAJEROSURBANOS", "arriving_time": 1, "courier_class": "CourierSkydropx"},
+    {"desc": "Día siguiente 2 dias 107.0",          "service": "Día siguiente", "price":  107.0 , "courier": "NINETYNINEMINUTES", "arriving_time": 2, "courier_class": "CourierSkydropx"},
+    {"desc": "Mismo día 1 dias 107.0",              "service": "Mismo día", "price":  107.0 , "courier": "NINETYNINEMINUTES", "arriving_time": 1, "courier_class": "CourierSkydropx"},
+    {"desc": "Standard 10 dias 177.0",              "service": "Standard", "price":  177.0 , "courier": "AMPM", "arriving_time": 10, "courier_class": "CourierSkydropx"},
+    {"desc": "Día Siguiente Premium 2 dias 207.0",  "service": "Día Siguiente Premium", "price":  207.0 , "courier": "SKYDROPX", "arriving_time": 2, "courier_class": "CourierSkydropx"},
+    {"desc": "Terrestre Premium 5 dias 178.0",      "service": "Terrestre Premium", "price":  178.0 , "courier": "SKYDROPX", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Día Siguiente 3 dias 171.0",          "service": "Día Siguiente", "price":  171.0 , "courier": "SKYDROPX", "arriving_time": 3, "courier_class": "CourierSkydropx"},
+    {"desc": "Terrestre 6 dias 130.0",              "service": "Terrestre", "price":  130.0 , "courier": "SKYDROPX", "arriving_time": 6, "courier_class": "CourierSkydropx"},
+    {"desc": "Standard 5 dias 89.0",                "service": "Standard", "price":  89.0 , "courier": "VENCEDOR", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Regular 5 dias 112.0",                "service": "Regular", "price":  112.0 , "courier": "ENVIA", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Nacional 10 dias 134.0",              "service": "Nacional", "price":  134.0 , "courier": "CARSSA", "arriving_time": 10, "courier_class": "CourierSkydropx"},
+    {"desc": "Regular 5 dias 120.0",                "service": "Regular", "price":  120.0 , "courier": "SENDEX", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Nacional 5 dias 216.0",               "service": "Nacional", "price":  216.0 , "courier": "PAQUETEXPRESS", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "UPS Express 5 dias 286.0",            "service": "UPS Express", "price":  286.0 , "courier": "UPS", "arriving_time": 5, "courier_class": "CourierSkydropx"},
+    {"desc": "Servicio Express 2 dias 188.0",       "service": "Servicio Express", "price":  188.0 , "courier": "ESTAFETA", "arriving_time": 2, "courier_class": "CourierSkydropx"},
+    {"desc": "Terrestre 5 dias 149.0",              "service": "Terrestre", "price":  149.0 , "courier": "ESTAFETA", "arriving_time": 5, "courier_class": "CourierSkydropx"}
+]

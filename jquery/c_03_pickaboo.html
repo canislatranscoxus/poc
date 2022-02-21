@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!--
+        .cars {
+            display: block;    
+        }
+        
+        .chivalry {
+            display: none;
+        }
+
+-->
+
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 80px;
+        }
+        .cars {
+            display: block;
+        }
+        
+        .chivalry {
+            display: none;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $( "#cars"     ).toggle();
+            $( "#chivalry" ).toggle();
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <p> This page has 2 DropDown Lists, when you click the button one list hides and the other appears.</p>
+    <button class="btn_big"  >Click to swithc the lists</button>
+    <br> &nbsp;<br>    
+
+    <select name="cars" id="cars" class="cars" >
+        <option value="Ferrari">Ferrari</option>
+        <option value="Lamborghini">Lamborghini</option>
+        <option value="Mustang">Mustang</option>
+        <option value="Bugatti">Bugatti</option>
+        <option value="Corvette">Corvette</option>
+    </select>
+
+    <select name="chivalry" id="chivalry" class="chivalry" >
+        <option value="Fencing">Fencing</option>
+        <option value="Archery">Archery</option>
+        <option value="Chess">Chess</option>
+        <option value="Falconry">Falconry</option>
+    </select>
+
+
+
+</body>
+</html>

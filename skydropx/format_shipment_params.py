@@ -38,6 +38,11 @@ def format_fast_menu_rates( j ):
 data = format_fast_menu_rates( j )
 
 print( '\n Menu Rates \n' )
-print( json.dumps( data, indent = 3 ) )
+#print( json.dumps( data, indent = 3 ) )
+
+print( '\n [' )
+for v in data.values():
+    print( '{},'.format( v ) )
+print( '\n ]' )
 
 print( '\n ... end' )

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 80px;
+        }
+        .animals_asc {
+            display: block;
+            background-color: yellow;
+        }
+        
+        .animals_desc {
+            display: none;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function toggle_animals() {
+            //var selected = $( "#animals_order_by" ).val();
+            var selected = document.getElementById("animalsOrder").value;
+
+            $( "#order_value" ).text( "selected value: " + selected );
+
+            if (selected === "asc" ) {
+                $( "#animals_asc"  ).show();
+                $( "#animals_desc" ).hide();
+            }
+            else {
+                $( "#animals_asc"  ).hide();
+                $( "#animals_desc" ).show();
+            }
+        }
+        
+        
+    </script>
+</head>
+
+<body>
+    <p id="order_value" >order value is: </p><br> &nbsp;<br>
+
+    <label>Order by </label>
+    
+    <select id="animalsOrder" onchange="toggle_animals()" >
+        <option value="asc" >Ascending  - A Z</option>
+        <option value="desc">Descending - Z A</option>
+    </select>
+
+
+    <div class="animals_asc" id="animals_asc" onchange="select_animal()" >
+        <input type="radio" id="az_choice1"
+               name="contact" value="ant">
+        <label for="az_choice1">ant - cooperate to win</label><br>
+
+        <input type="radio" id="az_choice2"
+               name="contact" value="mongoose">
+        <label for="az_choice2">mongoose - resilient and inmune to venom</label><br>
+
+        <input type="radio" id="az_choice3"
+               name="contact" value="wasp">
+        <label for="az_choice3">wasp - alert and fast</label><br>
+    </div>
+
+    <div class="animals_desc" id="animals_desc" onchange="select_animal()" >
+        <input type="radio" id="za_choice1"
+               name="contact" value="wasp">
+        <label for="za_choice1">wasp - alert and fast</label><br>
+
+        <input type="radio" id="za_choice2"
+               name="contact" value="mongoose">
+        <label for="za_choice2">mongoose - resilient and inmune to venom</label><br>
+
+        <input type="radio" id="za_choice3"
+               name="contact" value="ant">
+        <label for="za_choice3">ant - cooperate to win</label><br>
+    </div>
+
+
+</body>
+</html>

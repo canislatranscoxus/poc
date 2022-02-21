@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 300px;
+        }
+
+        .cars {
+            visibility: visible;
+        }
+        
+        .chivalry {
+            visibility: visible;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fun_toggle( obj_id ) {
+            var x = document.getElementById( obj_id );
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+
+    $(document).ready(function(){
+    $("btn_big").click(function(){
+        
+        //$( cars     ).toggle();
+        //$( chivalry ).toggle();
+        fun_toggle( "cars"     );
+        fun_toggle( "chivalry" );
+
+    });
+    });
+    </script>
+</head>
+
+<body>
+
+
+    <select name="cars" id="cars" class="cars" >
+        <option value="Ferrari">Ferrari</option>
+        <option value="Lamborghini">Lamborghini</option>
+        <option value="Mustang">Mustang</option>
+        <option value="Bugatti">Bugatti</option>
+        <option value="Corvette">Corvette</option>
+    </select>
+
+    <select name="chivalry" id="chivalry" class="chivalry" >
+        <option value="Fencing">Fencing</option>
+        <option value="Archery">Archery</option>
+        <option value="Chess">Chess</option>
+        <option value="Falconry">Falconry</option>
+    </select>
+
+
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<button class="btn_big"  >pick a boo</button>
+
+</body>
+</html>

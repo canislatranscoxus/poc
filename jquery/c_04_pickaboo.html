@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!--
+        .cars {
+            display: block;    
+        }
+        
+        .chivalry {
+            display: none;
+        }
+
+-->
+
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 80px;
+        }
+        .animals_asc {
+            display: block;
+            background-color: yellow;
+        }
+        
+        .animals_desc {
+            display: none;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $( "#animals_asc"  ).toggle();
+            $( "#animals_desc" ).toggle();
+        });
+    });
+
+    function myFunction() {
+        //var selected = $( "#animals_order_by" ).val();
+        var selected = document.getElementById("#animalsOrder").value;
+
+        alert( "myFunction .... begin" );
+        alert( selected );
+
+        $( "order_value" ).text( selected );
+
+        if (selected = "asc" ) {
+            $( "#animals_asc"  ).show();
+            $( "#animals_desc" ).hide();
+        }
+        else {
+            $( "#animals_asc"  ).hide();
+            $( "#animals_desc" ).show();
+        }
+       
+    };
+    </script>
+</head>
+
+<body>
+    <p> This page has 2 DropDown Lists, when you click the button one list hides and the other appears.</p>
+    <button class="btn_big"  >Click to swithc the lists</button>
+    <br> &nbsp;<br>    
+
+    <p id="order_value" >order value is: </p><br> &nbsp;<br>
+
+    <label>Order by </label>
+    
+    <select id="animalsOrder" onchange="myFunction()" >
+        <option value="asc" >Ascending  - A Z</option>
+        <option value="desc">Descending - Z A</option>
+    </select>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+      </select>
+
+
+    <div class="animals_asc" id="animals_asc" >
+        <input type="radio" id="az_choice1"
+               name="contact" value="ant">
+        <label for="az_choice1">ant - cooperate to win</label><br>
+
+        <input type="radio" id="az_choice2"
+               name="contact" value="mongoose">
+        <label for="az_choice2">mongoose - resilient and inmune to venom</label><br>
+
+        <input type="radio" id="az_choice3"
+               name="contact" value="wasp">
+        <label for="az_choice3">wasp - alert and fast</label><br>
+    </div>
+
+    <div class="animals_desc" id="animals_desc" >
+        <input type="radio" id="za_choice1"
+               name="contact" value="wasp">
+        <label for="za_choice1">wasp - alert and fast</label><br>
+
+        <input type="radio" id="za_choice2"
+               name="contact" value="mongoose">
+        <label for="za_choice2">mongoose - resilient and inmune to venom</label><br>
+
+        <input type="radio" id="za_choice3"
+               name="contact" value="ant">
+        <label for="za_choice3">ant - cooperate to win</label><br>
+    </div>
+
+
+</body>
+</html>
