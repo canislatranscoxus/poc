@@ -38,6 +38,10 @@ Chunks generator function for iterating pandas Dataframes and Series
 https://stackoverflow.com/questions/25699439/how-to-iterate-over-consecutive-chunks-of-pandas-dataframe-efficiently
 
 
+* How to convert a pandas DataFrame into a list of tuples in Python
+
+https://www.kite.com/python/answers/how-to-convert-a-pandas-dataframe-into-a-list-of-tuples-in-python
+
 
 
 
