@@ -79,6 +79,6 @@ if __name__ == '__main__':
 
     ut = Ut1()
     ut.t_02()
-    ut.t_03()
+    #ut.t_03()
 
     print( 'test... end. \n' )
