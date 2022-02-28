@@ -18,5 +18,12 @@ class Robot:
 r1 = Robot( 'T800', 'platinum', 'platinum recovered by live skin' )
 r2 = Robot( 'T1000', 'liquid metal', '3D morphing' )
 
+print( '\n get Object Attributes in a Dictionary' )
 print( 'r1: {}'.format( r1.__dict__ ) )
 print( 'r2: {}'.format( r2.__dict__ ) )
+
+print( '\n get the class name from the Object' )
+print( 'object: r1, type:{} ,Class Name: {}'.format( type(r1), type(r1).__name__ ) )
+print( 'object: r1, type:{} ,Class Name: {}'.format( type(r1), type(r1).__name__ ) )
+
+print( '\n\n' )
