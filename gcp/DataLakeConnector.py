@@ -104,6 +104,18 @@ class DataLakeConnector:
         except Exception as e:
             print( 'DataLakeConnector.download_as_string(), error: {}'.format( e ) )
 
+    def download_as_dic( self, src ):
+        '''read a file in data lake and download it to local machine.
+        src : the file path inside data lake/bucket. 
+        tar : file path in our local machine. Directories must exist.
+        '''
+        d = None
+        try:
+            d = json.loads( self.download_as_string( src ) )
+            return d
+
+        except Exception as e:
+            print( 'DataLakeConnector.download_as_json(), error: {}'.format( e ) )
 
 
     def __init__(self, params :dict = None) -> None:
