@@ -1,3 +1,10 @@
+'''
+description: This class allow to upload and download objects from Cloud Storage.
+                The objects can be files, or strings.
+
+links:
+    https://cloud.google.com/storage/docs/downloading-objects#downloading-an-object
+'''
 import json
 from os.path    import join
 from shutil     import copy
@@ -78,6 +85,24 @@ class DataLakeConnector:
         except Exception as e:
             print( 'DataLakeConnector.download(), error: {}'.format( e ) )
 
+
+    def download_as_string( self, src ):
+        '''read a file in data lake and download it to local machine.
+        src : the file path inside data lake/bucket. 
+        tar : file path in our local machine. Directories must exist.
+        '''
+        try:
+            s = None
+            if self.on_cloud:
+                s = GCS.get_str_from_blob( self.bucket, src )
+            else:
+                file_path = join( self.local_dir, src )
+                with open( file_path, 'r') as reader:
+                    s = reader.read()
+            return s
+
+        except Exception as e:
+            print( 'DataLakeConnector.download_as_string(), error: {}'.format( e ) )
 
 
 
