@@ -11,7 +11,7 @@ description: this script uses pandas to
 import pandas as pd
 import json
 
-file_path = '/home/art/git/poc/csv/data.json'
+file_path = '/home/art/git/poc/sort/data.json'
 
 f = open( file_path )
 # returns JSON object as
