@@ -20,8 +20,8 @@ data = {
    "method"         : "bank_account",
    "amount"         : 100,
    "description"    : "Cargo con banco",
-   "order_id"       : "Boid_003",
-   "due_date"       : "2021-10-01T23:59:25-05:00",
+   "order_id"       : "Boid_004",
+   "due_date"       : "2022-12-31T23:59:25-05:00",
 
    "customer"       : {
         "name"          : "Mickey",
