@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 80px;
+        }
+        .animals_asc {
+            display: block;
+            background-color: yellow;
+        }
+        
+        .animals_desc {
+            display: none;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function on_size_changed() {
+            //var selected = $( "#animals_order_by" ).val();
+
+            j = { 
+                "small"  : 10,
+                "medium" : 20,
+                "large"  : 30,
+            }
+
+            var key = document.getElementById( "size" ).value;
+
+
+            $( "#txt_price" ).text( "price: " + j[ key ] );
+
+        }
+
+        
+        
+    </script>
+</head>
+
+<body>
+
+    <label>Cap Size </label>
+    
+    <select id="size" onchange="on_size_changed()" >
+        <option value="small" >Small  S</option>
+        <option value="medium">Medium M</option>
+        <option value="large" >Large  L</option>
+    </select>
+
+    
+    <p id="txt_price" >$ </p><br> &nbsp;<br>
+
+</body>
+</html>

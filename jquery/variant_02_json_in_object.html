@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .btn_big{
+            width: 350px;
+            height: 80px;
+        }
+        .txt_data {
+            display: block;
+            color: black;
+            background-color: yellow;
+            width: 50%;
+            height: 100px;
+        }
+        
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function on_size_changed() {
+            //var selected = $( "#animals_order_by" ).val();
+
+            txt_data = document.getElementById( "txt_data" ).value; 
+            const j = JSON.parse( txt_data );
+            /*j = { 
+                "small"  : 10,
+                "medium" : 20,
+                "large"  : 30,
+            }*/
+
+            var key = document.getElementById( "size" ).value;
+
+
+            $( "#txt_price" ).text( "price: " + j[ key ] );
+
+        }
+
+        
+        
+    </script>
+</head>
+
+<body>
+
+    <label>Cap Size </label>
+    
+    <select id="size" onchange="on_size_changed()" >
+        <option value="small" >Small  S</option>
+        <option value="medium">Medium M</option>
+        <option value="large" >Large  L</option>
+    </select>
+
+    
+    <p id="txt_price" >$ </p><br> &nbsp;<br>
+
+    <br>
+    <input id="txt_data" class="txt_data" name="txt_data" value='{"small": 10,"medium" : 20, "large" : 30 }' />
+
+</body>
+</html>
