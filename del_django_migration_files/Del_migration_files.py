@@ -19,6 +19,7 @@ class Del_migration_files:
                  'address' 
                 , 'cart'
                 , 'client'
+                , 'cocedis'
                 , 'coupons'
                 , 'locale' 
                 , 'orders'
