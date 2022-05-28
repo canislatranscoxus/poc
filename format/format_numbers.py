@@ -23,3 +23,9 @@ for i in my_numbers:
     my_float = round(i , 2)
     print( '${:0,.2f}'.format( my_float ) )
 
+
+print( 'padding with left zeros ' )
+i = 123
+s = str( i ).zfill( 5 )
+print( 'i: {}'.format( i ) )
+print( 's: {}'.format( s ) )
