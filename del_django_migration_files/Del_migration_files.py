@@ -9,34 +9,24 @@ import glob
 class Del_migration_files:
 
     base_dir = None
-    projects = None
+    apps = None
 
-    def set_projects( self ):
+    def set_apps( self ):
         '''here we set which project we want clean from migration files.'''
         try:
-            self.projects = None
-            self.projects = [
-                 'address' 
-                , 'cart'
-                , 'client'
-                , 'cocedis'
-                , 'coupons'
-                , 'locale' 
-                , 'orders'
-                , 'payment'
-                , 'qshop'
-                , 'reports'
-                , 'ship'
-                , 'shop'
-                , 'webhook'
+            self.apps = None
+            self.apps = [
+                  'my_app_01'
+                , 'my_app_02'
+                , 'my_app_03'
             ]
 
-            print( '\n projects: \n' )
-            for i in self.projects:
+            print( '\n apps: \n' )
+            for i in self.apps:
                 print( i )
             
         except Exception as e:
-            print( 'Del_migration_files.set_projects(), error: {}'.format( e ) )
+            print( 'Del_migration_files.set_apps(), error: {}'.format( e ) )
 
     def get_migration_files( self, project ):
         '''We get all the migration files from one project'''
@@ -91,10 +81,10 @@ class Del_migration_files:
 
     def __init__( self, base_dir ):
         self.base_dir = base_dir
-        self.set_projects()
+        self.set_apps()
 
 if __name__ == '__main__':
-    base_dir = '/home/art/git/cbd/basmati/'
+    base_dir = '/home/my_user/my_django/my_project/folder/'
     del_migration_files = Del_migration_files( base_dir = base_dir )
     del_migration_files.run()
     print( 'end. \n\n' )
