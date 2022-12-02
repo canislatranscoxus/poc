@@ -1,3 +1,8 @@
+'''
+Update the time
+'''
+
+
 from datetime import datetime
 
 dt = datetime.now()
