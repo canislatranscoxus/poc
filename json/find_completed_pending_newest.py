@@ -32,16 +32,19 @@ def find_completed_pending_newest( transactions ):
                 newest      = d
                 newest_dt   = dt
 
-        if pending != None:
+        if pending == None:
+            return newest
+        else:
             return pending
 
-        return newest
-
+        
     except Exception as e:
         print( 'is_completed(), error: {}'.format( e ) )
 
 
-file_path = '/home/art/data/op/71.json'
+
+
+file_path = '/home/art/data/op/x71.json'
 
 
 with open( file_path, 'r') as f:
@@ -59,7 +62,7 @@ with open( file_path, 'r') as f:
         #print( d['id'], '\t', d['transaction_type'], '\t' , d['status'], d['operation_date'] )
         print( '{id} {transaction_type} {status}\t {operation_date}'.format( **d ) )
 
-    t = find_newest( transactions )
+    t = find_completed_pending_newest( transactions )
     if t != None:
         print( '\n completed charge: \n' )
         print( json.dumps( t, indent = 3 ) )
