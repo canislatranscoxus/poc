@@ -1,3 +1,13 @@
+'''
+Google Sheets API
+
+links:
+
+    https://developers.google.com/sheets/api/quickstart/python
+    https://developers.google.com/sheets/api/guides/values
+
+'''
+
 from __future__ import print_function
 
 import os.path
