@@ -2,7 +2,7 @@
 description: read a txt file, and print to console each word
 '''
 
-in_file_path  = '/home/art/git/poc/txt_files/p1.txt'
+in_file_path  = '/io/txt_files/p1.txt'
 
 # dictionary of words
 d = {}
