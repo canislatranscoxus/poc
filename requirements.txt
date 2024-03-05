@@ -1,0 +1,8 @@
+sqlalchemy
+jupyter
+psycopg2
+numpy
+pandas
+pgvector
+langchain
+transformers
