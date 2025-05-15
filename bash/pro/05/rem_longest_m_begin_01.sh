@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#┌────────────────────────────────────────────────────────────────────────┐
+#│ Description: remove  longest match from the begin of the string        │
+#│                                                                        │
+#└────────────────────────────────────────────────────────────────────────┘
+
+clear
+
+printf "remove longest match from the end of the string\n "
+
+s=Wollogong
+
+
+printf "%s %s \n" "s: " $s 
+s=${s##*o}
+printf "%s %s \n" "s: " $s 
+
+
+s=Mississipi
+patter=i*
+printf "%s %s \n" "s: " $s 
+s=${s##*i}
+printf "%s %s \n" "s: " $s 

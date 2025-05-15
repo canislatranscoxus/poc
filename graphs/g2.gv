@@ -1,0 +1,8 @@
+// g2
+digraph {
+	A [label=A]
+	B [label=B]
+	C [label=C]
+	A -> B
+	A -> C
+}
